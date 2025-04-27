@@ -1,0 +1,4 @@
+github.com/meganii/gohugo-template-tailwindcss v0.0.0-20250427034405-080f30080222 h1:dX3hMDBJHjaVLKlu+HU8DzG4PbHRBn447yILbGEdj3M=
+github.com/meganii/gohugo-template-tailwindcss v0.0.0-20250427034405-080f30080222/go.mod h1:peRRQ42/ShQ7rzdTMQjpVOOHFGWQCX/0KFucK1aNg1I=
+github.com/meganii/vault-content v0.0.0-20250426211855-d663ca90ec0c h1:8kMi/bpq69WCTAOIY9J12n0SttLKzKQxQDXL1hUFXaA=
+github.com/meganii/vault-content v0.0.0-20250426211855-d663ca90ec0c/go.mod h1:NC5LTxsTVAxoOe1DgoWoUjQ7GeIG9+X7O2jsV0SgXYE=

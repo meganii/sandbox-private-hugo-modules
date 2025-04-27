@@ -1,0 +1,54 @@
+{{ define "main" }}
+  {{ range .RegularPages }}
+  <article class="m-4 rounded-sm border border-gray-200 pt-1 pb-1 lg:mx-0">
+    <a class="" href="{{ .Permalink }}">
+      <!--  -->
+      <div class="">
+        <div class="px-4 pt-4">
+          <span class="text-sm text-gray-800"
+            >{{ .Date.Format "2006.01.02" }}
+          </span>
+          <span class="text-sm text-gray-800">
+            {{ range .Params.category }}{{ . | upper }}{{ end }}
+          </span>
+          <div class="mb-2 text-xl font-bold text-black">
+            {{ .Title }}
+          </div>
+        </div>
+        <div class="flex flex-row px-4">
+          {{ if and (or .Params.img .Params.eyecatch) (ne (or .Params.img .Params.eyecatch) "") }}
+            <div class="basis-3/4 leading-normal">
+              <div class="mb-8 px-1 text-wrap">
+                <p class="text-gray-700">
+                  {{ .Content| plainify | truncate 150 }}
+                </p>
+              </div>
+            </div>
+            <div class="basis-1/4 rounded-sm text-center">
+              <img
+                loading="lazy"
+                class="w-32 object-contain"
+                src="{{ if isset .Params "eyecatch" }}
+                  {{ .Params.Eyecatch }}
+                {{ else if isset .Params "img" }}
+                  {{ .Params.img }}
+                {{ end }}"
+              />
+            </div>
+          {{ else }}
+            <div class="p-4 leading-normal">
+              <div class="mb-8 px-1">
+                <p class="text-base text-gray-700">
+                  {{ .Summary | plainify | truncate 200 }}
+                </p>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </a>
+  </article>
+  
+  {{ end }}
+
+{{ end }}

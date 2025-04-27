@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <article class="mx-4 sm:mx-12">
+    <section data-pagefind-body class="">
+      <h1 class="mt-4 text-4xl">{{ .Title }}</h1>
+      <div class="mt-2 text-sm">
+        <span class="mr-1">更新日:{{ .Lastmod.Format "2006.01.02" }}</span>
+        <span class="">作成日:{{ .Date.Format "2006.01.02" }}</span>
+      </div>
+
+      <div class="post mt-2 leading-loose">
+        {{ .Content }}
+      </div>
+    </section>
+  </article>
+{{ end }}

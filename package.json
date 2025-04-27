@@ -1,0 +1,41 @@
+{
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/meganii/sandbox-private-hugo-modules/issues"
+  },
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "@tailwindcss/cli": "project",
+      "postcss": "github.com/meganii/gohugo-template-tailwindcss",
+      "postcss-cli": "github.com/meganii/gohugo-template-tailwindcss",
+      "prettier": "github.com/meganii/gohugo-template-tailwindcss",
+      "prettier-plugin-go-template": "github.com/meganii/gohugo-template-tailwindcss",
+      "prettier-plugin-tailwindcss": "github.com/meganii/gohugo-template-tailwindcss",
+      "tailwindcss": "project"
+    }
+  },
+  "dependencies": {},
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "tailwindcss": "^4.1.4"
+  },
+  "homepage": "https://github.com/meganii/sandbox-private-hugo-modules#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "sandbox-private-hugo-modules",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/meganii/sandbox-private-hugo-modules.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

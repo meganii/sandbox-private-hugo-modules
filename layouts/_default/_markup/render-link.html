@@ -1,0 +1,28 @@
+{{- /* 
+  Render Hook
+  - 内部の.mdファイルリンクは適切なRelPermalinkに変換
+  - 外部リンクは適切な属性を付与
+  - アフィリエイトリンクは特別に処理
+*/ -}}
+
+{{- $isExternal := strings.HasPrefix .Destination "http" -}}
+{{- $isMdFile := strings.HasSuffix .Destination ".md" -}}
+
+{{- if and (not $isExternal) $isMdFile }}
+  {{/* 内部マークダウンファイルへのリンク */}}
+  {{- $url := urls.Parse .Destination -}}
+  {{- $text := .Text | safeHTML -}}
+  {{ with site.GetPage $url.Path }}
+    <a data-rel="prefetch" class="text-blue-600 hover:underline" href="{{ .RelPermalink }}">{{ $text }}</a>
+  {{ end }}
+{{- else -}}
+  {{/* 通常のリンク（内部または外部） */}}
+  <a class="text-blue-600 hover:underline {{ if $isExternal }}external-link{{ end -}}"
+    {{- if not $isExternal }} data-rel="prefetch"{{ end -}}
+    href="{{ .Destination | safeURL }}"
+    {{ with .Title }}title="{{ . }}"{{ end }}
+    {{ if $isExternal }}target="_blank" rel="noopener"{{ end }}
+  >
+    {{ .Text | safeHTML }}
+  </a>
+{{- end -}}
