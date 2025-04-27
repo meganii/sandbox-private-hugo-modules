@@ -1,4 +1,4 @@
-baseurl = "https://sandbox-private-hugo-modules.meganii.workers.dev/"
+baseurl = "https://sandbox-private-hugo-modules.pages.dev/"
 title = "SIS Lab"
 
 hasCJKLanguage = true
